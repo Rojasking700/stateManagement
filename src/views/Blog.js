@@ -23,7 +23,7 @@ export default class Blog extends Component {
             <div>
                 this is my blog!
                 <div className="row">
-                    {this.state.blog.map(p => <Blogs key={p.id} blog={p} title={this.props.title}  content={this.props.content} />)}
+                    {this.state.blog.map(p => <Blogs key={p.post_id} blog={p} title={this.props.title}  content={this.props.content} />)}
                 </div>
             </div>
         )
