@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
+    // sumCartProducts =  aList => {
+    //     let total = 0;
+    //     for (let i=0; i<aList.length;i++){
+    //         total += aList[i].price;
+
+    //     }
+    //     return total.toFixed(2);
+    // }
     render() {
         return (
             <div>
@@ -20,7 +28,19 @@ export default class Navbar extends Component {
                             <Link className="nav-link" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/contact">contact</Link>
+                            <Link className="nav-link" to="/contact">Contact</Link>
+                            </li>
+                            <li className="nav-item">
+                            <Link className="nav-link" to="/blog">Blog</Link>
+                            </li>
+                            <li className="nav-item">
+                            <Link className="nav-link" to="/shop">Shop</Link>
+                            </li>
+                            <li className="nav-item">
+                            <Link className="nav-link flex-end" to="/cart">
+                                Cart &nbsp;
+                                <span className="bg-light"><i className="fa fa-shopping-cart"></i>{this.props.cart.length} | ${this.props.sumCartProducts(this.props.cart)}</span>
+                            </Link>
                             </li>
                         </ul>
                         </div>
